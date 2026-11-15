@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INANNA COMPANY | Innovación • Tecnología • Soluciones</title>
+  <meta name="description" content="INANNA COMPANY — Ingeniería Mecatrónica, Automatización Industrial 4.0, Sistemas SCADA, Robótica Humanoide e Inteligencia Artificial desde Córdoba, Argentina." />
+  <link rel="icon" type="image/jpeg" href="assets/inanna-isotipo.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .corp-wrap { max-width: 1380px; margin: 0 auto; padding: 28px 22px 68px; display: flex; flex-direction: column; gap: 26px; }
+    .corp-hero {
+      background: radial-gradient(circle at 85% 20%, rgba(0, 184, 230, 0.18), transparent 42%), linear-gradient(145deg, #0b111c 0%, #070b12 100%);
+      border: 1px solid rgba(0, 184, 230, 0.38); border-radius: 16px; padding: 34px;
+      display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: center;
+      box-shadow: 0 16px 42px rgba(0, 0, 0, 0.55);
+    }
+    .corp-logo-box {
+      background: #05080d; border: 1px solid rgba(0, 184, 230, 0.45); border-radius: 14px; padding: 14px;
+      box-shadow: 0 0 28px rgba(0, 184, 230, 0.2); display: flex; justify-content: center; align-items: center;
+    }
+    .corp-logo-box img { width: 100%; max-width: 230px; height: auto; border-radius: 8px; }
+    .div-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(235px, 1fr)); gap: 13px; }
+    .div-card {
+      background: #111927; border: 1px solid rgba(148, 163, 184, 0.18); border-radius: 10px; padding: 15px;
+      transition: transform 0.16s ease, border-color 0.16s ease;
+    }
+    .div-card:hover { transform: translateY(-2px); border-color: var(--accent-cyan); }
+    .div-card.core { border-color: rgba(0, 184, 230, 0.48); background: linear-gradient(160deg, #132033 0%, #0e1624 100%); }
+    .div-tag { font-family: var(--font-mono); font-size: 0.77rem; font-weight: 800; color: var(--accent-cyan); margin-bottom: 5px; }
+    .sol-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .sol-card { background: #101724; border: 1px solid rgba(0, 184, 230, 0.3); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .sol-price { font-family: var(--font-mono); font-size: 1.25rem; font-weight: 800; color: #6ee7b7; }
+    @media (max-width: 980px) { .corp-hero, .sol-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="brand-block">
+      <div class="inanna-monogram">
+        <img src="assets/inanna-isotipo.jpg" alt="INANNA Monogram" />
+      </div>
+      <div class="brand-titles">
+        <h1>INANNA COMPANY</h1>
+        <div class="brand-subtitle">Innovación • Tecnología • Soluciones — <strong>Córdoba, Argentina</strong></div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a href="#divisiones" class="nav-pill">Divisiones (11)</a>
+      <a href="#soluciones" class="nav-pill">Soluciones Industriales</a>
+      <a href="#direccion" class="nav-pill">Dirección Técnica</a>
+    </div>
+  </header>
+
+  <main class="corp-wrap">
+    <section class="corp-hero">
+      <div class="corp-logo-box">
+        <img src="assets/inanna-logo-full.jpg" alt="INANNA COMPANY Logo Oficial" />
+      </div>
+      <div>
+        <span class="badge badge-cyan">INGENIERÍA MECATRÓNICA • AUTOMATIZACIÓN 4.0 • ROBÓTICA &amp; IA</span>
+        <h2 style="font-size:1.78rem;font-weight:800;color:#fff;margin:8px 0 10px;">Soluciones Integrales de Grado Industrial, Mantenimiento Predictivo y Robótica Avanzada</h2>
+        <p style="color:#cbd5e1;font-size:0.96rem;line-height:1.62;margin-bottom:14px;">
+          Liderada por el <strong>Técnico Superior en Mecatrónica Fabio Maximiliano Medina Rojas</strong>, <strong>INANNA COMPANY</strong> diseña, fabrica e integra sistemas SCADA, telemetría industrial sin router (ESP-NOW AES-128), lazos de instrumentación 4–20 mA (Norma NAMUR NE43), tableros Modbus RTU/TCP y plataformas robóticas cognitivas listas para planta y campo.
+        </p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <span class="badge badge-green" style="padding:5px 11px;">✓ Instrumentación 4–20 mA NAMUR NE43</span>
+          <span class="badge badge-green" style="padding:5px 11px;">✓ Redes Industriales ESP-NOW Sin Router</span>
+          <span class="badge badge-green" style="padding:5px 11px;">✓ Integración PLC Modbus TCP:502 / RS485</span>
+          <span class="badge badge-green" style="padding:5px 11px;">✓ Robótica Humanoide &amp; IA Local</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="divisiones" class="panel">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">Las 11 Divisiones Oficiales de INANNA COMPANY</div>
+          <div class="panel-subtitle">Ecosistema tecnológico integral para la industria, el agro, la educación y la robótica</div>
+        </div>
+        <span class="badge badge-purple">INNOVACIÓN • TECNOLOGÍA • SOLUCIONES</span>
+      </div>
+      <div class="div-grid">
+        <div class="div-card core"><div class="div-tag">AUTOMATION INANNA</div><p style="font-size:0.8rem;color:#cbd5e1;">Instrumentación 4–20 mA, diagnóstico Cero Vivo NAMUR NE43, tableros PLC/Modbus RTU/TCP y lazos cerrados VFD.</p></div>
+        <div class="div-card core"><div class="div-tag">ROBOTICS INANNA</div><p style="font-size:0.8rem;color:#cbd5e1;">Desarrollo del robot humanoide Inanna V2, cinemática SCARA, servocontrol mecatrónico y actuación autónoma.</p></div>
+        <div class="div-card core"><div class="div-tag">AI INANNA</div><p style="font-size:0.8rem;color:#cbd5e1;">Redes neuronales locales, visión artificial, fusión sensorial satelital-terrestre y mantenimiento predictivo.</p></div>
+        <div class="div-card core"><div class="div-tag">INDUSTRIES INANNA</div><p style="font-size:0.8rem;color:#cbd5e1;">Gabinetes estancos IP67, módulos en riel DIN, monitoreo ISO 10816 de motores, bombas, silos y cadena de frío.</p></div>
+        <div class="div-card core"><div class="div-tag">SERVICE INANNA</div><p style="font-size:0.8rem;color:#cbd5e1;">Mantenimiento Preventivo, Predictivo (CBM), Correctivo y Proactivo con horómetros en memoria no volátil NVS.</p></div>
+        <div class="div-card"><div class="div-tag">LABS INANNA</div><p style="font-size:0.8rem;color:#cbd5e1;">I+D en comunicaciones industriales P2P, adquisición analógica ADS1115 de 16 bits y prototipado embebido.</p></div>
+        <div class="div-card"><div class="div-tag">DESIGN INANNA</div><p style="font-size:0.8rem;color:#cbd5e1;">Diseño electrónico PCB, modelado CAD/3D mecánico, ergonomía HMI SCADA e identidad industrial.</p></div>
+        <div class="div-card"><div class="div-tag">ACADEMY INANNA</div><p style="font-size:0.8rem;color:#cbd5e1;">Bancos didácticos STEM, capacitación técnica en mecatrónica e Industria 4.0 para escuelas e instituciones.</p></div>
+        <div class="div-card"><div class="div-tag">SUPPLY INANNA</div><p style="font-size:0.8rem;color:#cbd5e1;">Provisión de transmisores industriales 4–20 mA, shunts de precisión 0.1%, aisladores RS485 y energía solar.</p></div>
+        <div class="div-card"><div class="div-tag">PROJECTS INANNA</div><p style="font-size:0.8rem;color:#cbd5e1;">Ingeniería llave en mano para plantas industriales, cooperativas agropecuarias e infraestructura hídrica.</p></div>
+        <div class="div-card"><div class="div-tag">HOME INANNA</div><p style="font-size:0.8rem;color:#cbd5e1;">Domótica avanzada con Home Assistant, gestión energética sustentable y seguridad electrónica.</p></div>
+      </div>
+    </section>
+
+    <section id="soluciones" class="panel">
+      <div class="panel-header">
+        <div>
+          <div class="panel-title">Líneas Comerciales y Soluciones Llave en Mano</div>
+          <div class="panel-subtitle">Hardware nacional robusto, reparable y listo para integrar en planta o establecimiento rural</div>
+        </div>
+        <span class="badge badge-green">CATÁLOGO CORPORATIVO INANNA</span>
+      </div>
+      <div class="sol-grid">
+        <div class="sol-card">
+          <span class="badge badge-cyan" style="align-self:flex-start;">AGRO &amp; ESPECIALIDADES</span>
+          <h3 style="color:#fff;">Estación Rural Plug &amp; Play IIoT</h3>
+          <div class="sol-price">Desde $720 USD</div>
+          <p style="font-size:0.82rem;color:#cbd5e1;">Gateway local ESP32 con Wi-Fi propio + 2 Nodos Solares IP67 ESP-NOW + Sondas 24V DC 4–20 mA con protección anti-inundación NAMUR NE43. Cero abono mensual.</p>
+        </div>
+        <div class="sol-card">
+          <span class="badge badge-cyan" style="align-self:flex-start;">INDUSTRIA 4.0 &amp; PLANTAS</span>
+          <h3 style="color:#fff;">Suite SCADA Industrial Multi-Nodo</h3>
+          <div class="sol-price">Desde $1,850 USD</div>
+          <p style="font-size:0.82rem;color:#cbd5e1;">Monitoreo continuo de bombas centrífugas, compresores, vibración ISO 10816, silos y cámaras frigoríficas PT100 con salida directa Modbus TCP:502 y RS485 aislado.</p>
+        </div>
+        <div class="sol-card">
+          <span class="badge badge-cyan" style="align-self:flex-start;">EDUCACIÓN TÉCNICA</span>
+          <h3 style="color:#fff;">Banco Entrenador ACADEMY INANNA</h3>
+          <div class="sol-price">Desde $490 USD</div>
+          <p style="font-size:0.82rem;color:#cbd5e1;">Tablero didáctico transparente con resistencia shunt Kirchhoff 165 Ω (0.1%), llaves simuladoras de falla de cable/corto y manuales técnicos completos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="direccion" class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Dirección de Ingeniería</div>
+        <span class="badge badge-cyan">CÓRDOBA, ARGENTINA</span>
+      </div>
+      <div style="background:#0d1420;border:1px solid rgba(0,184,230,0.35);border-radius:12px;padding:20px;">
+        <h3 style="color:#fff;font-size:1.15rem;">Fabio Maximiliano Medina Rojas</h3>
+        <div style="color:#00b8e6;font-weight:700;font-size:0.86rem;margin:4px 0 8px;">Fundador &amp; Director Técnico — Técnico Superior en Mecatrónica</div>
+        <p style="color:#cbd5e1;font-size:0.86rem;line-height:1.55;">
+          Especialista en automatización industrial, instrumentación de procesos 4–20 mA, redes embebidas ESP-NOW/Modbus, mantenimiento predictivo (CBM) y desarrollo integral del robot humanoide cognitivo <strong>Inanna V2</strong>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div style="max-width:1380px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <img src="assets/inanna-logo-horizontal.jpg" alt="INANNA COMPANY" style="height:42px;border-radius:6px;border:1px solid rgba(0,184,230,0.35);" />
+        <span>© 2026 <strong>INANNA COMPANY</strong> — Innovación • Tecnología • Soluciones. Córdoba, Argentina.</span>
+      </div>
+      <span style="font-family:var(--font-mono);color:#00b8e6;">maximr123.1@gmail.com</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier Ejecutivo Legislativo • Proyecto Inanna Embajadores de Río Cuarto</title>
+    <meta name="description" content="Dossier Ejecutivo y Proyecto de Ordenanza ante el Concejo Deliberante de la Ciudad de Río Cuarto: Declaración de Interés Municipal al Proyecto Inanna V2 y designación de Fabio Maximiliano Medina Rojas e Inanna como Embajadores de la Robótica e IA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://inanna-company.github.io/concejo-rio-cuarto/">
+    <meta property="og:title" content="Dossier Ejecutivo Legislativo • Inanna V2 & Maxi Medina Rojas — Embajadores de Río Cuarto">
+    <meta property="og:description" content="Informe Integral de Trayectoria, UNESCO.org, 1.° Puesto Técnico NASA Space Apps 2026, Gira Educativa (+2.000 alumnos + 15 escuelas y geriátricos en agenda), Alcance en Medios y Proyecto de Ordenanza para Río Cuarto.">
+    <meta property="og:image" content="https://inanna-company.github.io/assets/inanna-logo-full.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/jpeg" href="https://inanna-company.github.io/assets/inanna-isotipo.jpg">
+    <style>
+        :root {
+            --bg-main: #080c12;
+            --bg-card: #14191f;
+            --bg-accent: #0f1724;
+            --bg-deep: #0b111b;
+            --border: #1e293b;
+            --gold: #FFD700;
+            --gold-soft: rgba(255, 215, 0, 0.35);
+            --blue: #1890ff;
+            --cyan: #00b8e6;
+            --cyan-soft: rgba(0, 184, 230, 0.35);
+            --green: #10b981;
+            --white: #FFFFFF;
+            --muted: #cbd5e1;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: "Segoe UI", Inter, Roboto, Arial, sans-serif;
+            background-color: var(--bg-main);
+            background-image: radial-gradient(circle at 85% 8%, rgba(0, 184, 230, 0.12), transparent 38%),
+                              radial-gradient(circle at 12% 18%, rgba(255, 215, 0, 0.07), transparent 32%);
+            color: var(--white);
+            line-height: 1.65;
+            padding: 1.8rem 1rem 3rem;
+        }
+        .top-nav {
+            max-width: 1080px;
+            margin: 0 auto 1rem auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .back-link {
+            color: var(--cyan);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 0.9rem;
+            border: 1px solid var(--cyan-soft);
+            border-radius: 999px;
+            background: rgba(15, 23, 36, 0.85);
+            transition: all 0.18s ease;
+        }
+        .back-link:hover {
+            background: rgba(0, 184, 230, 0.16);
+            border-color: var(--cyan);
+        }
+        .status-pill {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            color: #6ee7b7;
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            padding: 0.4rem 0.85rem;
+            border-radius: 999px;
+        }
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.6rem 2.8rem;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.78);
+        }
+        header {
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 1.6rem;
+            margin-bottom: 1.6rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: start;
+            gap: 1.5rem;
+        }
+        .brand-row {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            margin-bottom: 0.65rem;
+        }
+        .brand-logo {
+            height: 46px;
+            width: auto;
+            border-radius: 8px;
+            border: 1px solid var(--cyan-soft);
+            background: #05080d;
+        }
+        .brand-tag {
+            color: var(--cyan);
+            font-weight: 800;
+            font-size: 0.82rem;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+        h1 {
+            color: var(--gold);
+            font-size: 1.82rem;
+            line-height: 1.24;
+            margin-bottom: 0.55rem;
+        }
+        .subtitle {
+            color: var(--white);
+            font-size: 1.02rem;
+            opacity: 0.95;
+        }
+        .destinatario-badge {
+            margin-top: 0.85rem;
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.09);
+            border: 1px solid var(--gold-soft);
+            color: #fef08a;
+            padding: 0.45rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+        }
+        .action-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            margin-bottom: 1.6rem;
+            padding: 1rem 1.1rem;
+            background: var(--bg-deep);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .action-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.68rem 1.1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            text-decoration: none;
+            border: 1px solid transparent;
+            transition: transform 0.14s ease, opacity 0.14s ease, border-color 0.14s ease;
+        }
+        .btn:hover { transform: translateY(-1px); opacity: 0.95; }
+        .btn-gold {
+            background: linear-gradient(135deg, #FFD700, #FFB01F);
+            color: #080c12;
+            font-weight: 800;
+        }
+        .btn-cyan {
+            background: rgba(0, 184, 230, 0.15);
+            color: #7dd3fc;
+            border-color: var(--cyan-soft);
+        }
+        .btn-outline {
+            background: #131c2b;
+            color: var(--white);
+            border-color: #334155;
+        }
+        .tabs {
+            display: flex;
+            gap: 0.6rem;
+            margin-bottom: 1.8rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            background: var(--bg-accent);
+            color: var(--muted);
+            border: 1px solid var(--border);
+            padding: 0.72rem 1.25rem;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.94rem;
+            cursor: pointer;
+            transition: all 0.18s ease;
+        }
+        .tab-btn.active {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.18), rgba(0, 184, 230, 0.15));
+            color: var(--gold);
+            border-color: var(--gold);
+            box-shadow: 0 0 18px rgba(255, 215, 0, 0.14);
+        }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 0.5rem 0 2.2rem 0;
+        }
+        .kpi-card {
+            background: var(--bg-accent);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--gold);
+            border-radius: 10px;
+            padding: 1.15rem;
+        }
+        .kpi-num {
+            color: var(--gold);
+            font-size: 1.48rem;
+            font-weight: 800;
+        }
+        .kpi-label {
+            color: var(--white);
+            font-size: 0.89rem;
+            margin-top: 0.3rem;
+            line-height: 1.45;
+        }
+        section { margin-bottom: 2.4rem; }
+        h2 {
+            color: var(--gold);
+            font-size: 1.32rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.1rem;
+        }
+        h3 {
+            color: var(--cyan);
+            font-size: 1.08rem;
+            margin: 1.2rem 0 0.5rem 0;
+        }
+        p {
+            color: var(--muted);
+            margin-bottom: 0.9rem;
+            text-align: justify;
+        }
+        code {
+            background: rgba(0, 184, 230, 0.12);
+            color: #7dd3fc;
+            padding: 0.1rem 0.38rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        ul { list-style: none; margin: 0.8rem 0; }
+        ul li {
+            position: relative;
+            padding-left: 1.55rem;
+            margin-bottom: 0.78rem;
+            color: var(--white);
+            text-align: justify;
+        }
+        ul li::before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+        .highlight-agenda {
+            background: linear-gradient(135deg, rgba(0, 184, 230, 0.12), rgba(16, 185, 129, 0.1));
+            border: 1px solid var(--cyan-soft);
+            border-left: 4px solid var(--cyan);
+            border-radius: 10px;
+            padding: 1.1rem 1.3rem;
+            margin: 1.1rem 0;
+        }
+        .highlight-agenda strong { color: var(--gold); }
+        .nasa-box {
+            background: linear-gradient(145deg, #0b1324, #090f1c);
+            border: 1px solid rgba(24, 144, 255, 0.45);
+            border-left: 4px solid var(--gold);
+            border-radius: 12px;
+            padding: 1.35rem 1.5rem;
+            margin: 1.2rem 0;
+        }
+        .nasa-box h3 { margin-top: 0; color: var(--gold); }
+        .media-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.15rem;
+            margin-top: 1rem;
+        }
+        .media-card {
+            background: var(--bg-deep);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--cyan);
+            border-radius: 10px;
+            padding: 1.2rem;
+        }
+        .media-card h4 {
+            color: var(--gold);
+            margin-bottom: 0.55rem;
+            font-size: 1rem;
+        }
+        .media-card p {
+            font-size: 0.91rem;
+            margin-bottom: 0.45rem;
+            text-align: left;
+        }
+        .ordinance-box {
+            background: var(--bg-deep);
+            border: 1px solid var(--gold-soft);
+            border-radius: 12px;
+            padding: 1.8rem 2rem;
+            margin-top: 1.1rem;
+        }
+        .legal-doc {
+            background: #0b1018;
+            border: 1px solid #263348;
+            border-radius: 12px;
+            padding: 2.2rem 2.4rem;
+        }
+        .legal-doc .doc-right {
+            text-align: right;
+            color: var(--white);
+            margin-bottom: 1.2rem;
+        }
+        .legal-doc .doc-dest {
+            font-weight: 800;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            line-height: 1.45;
+        }
+        .legal-doc .sancion {
+            text-align: center;
+            font-weight: 800;
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin: 1.5rem 0;
+            letter-spacing: 0.4px;
+        }
+        .art {
+            margin-bottom: 1rem;
+            color: var(--white);
+            text-align: justify;
+        }
+        .art strong { color: var(--gold); }
+        footer {
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            margin-top: 2.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: var(--muted);
+            font-size: 0.89rem;
+        }
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #10b981;
+            color: #052e16;
+            font-weight: 800;
+            padding: 0.75rem 1.2rem;
+            border-radius: 10px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+            display: none;
+            z-index: 999;
+        }
+        @media (max-width: 780px) {
+            .container { padding: 1.5rem 1.2rem; }
+            header { grid-template-columns: 1fr; }
+            .media-grid { grid-template-columns: 1fr; }
+            .legal-doc { padding: 1.3rem 1.1rem; }
+            h1 { font-size: 1.45rem; }
+        }
+        @media print {
+            body { background: #fff !important; color: #000 !important; padding: 0; }
+            .top-nav, .action-bar, .tabs, .toast { display: none !important; }
+            .tab-panel { display: block !important; margin-bottom: 2rem; }
+            .container { box-shadow: none; border: none; background: #fff !important; padding: 0; max-width: 100%; }
+            h1, h2, .kpi-num, .art strong, .media-card h4, .legal-doc .doc-dest, .legal-doc .sancion { color: #0f172a !important; }
+            h3, .brand-tag { color: #0369a1 !important; }
+            p, ul li, .subtitle, .kpi-label, .art, .legal-doc .doc-right { color: #1e293b !important; }
+            .kpi-card, .ordinance-box, .media-card, .nasa-box, .highlight-agenda, .legal-doc {
+                background: #f8fafc !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+            .destinatario-badge { background: #f1f5f9 !important; color: #0f172a !important; border: 1px solid #94a3b8 !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="https://inanna-company.github.io/" class="back-link">← Portal Oficial INANNA COMPANY</a>
+    <span class="status-pill">● DOSSIER EJECUTIVO OFICIAL • RÍO CUARTO 2026</span>
+</div>
+
+<div class="container">
+    <header>
+        <div>
+            <div class="brand-row">
+                <img src="../assets/inanna-isotipo.jpg" onerror="this.src='https://inanna-company.github.io/assets/inanna-isotipo.jpg'" alt="INANNA COMPANY" class="brand-logo">
+                <div>
+                    <div class="brand-tag">INANNA COMPANY • ROBOTICS • AI • ACADEMY • RÍO CUARTO</div>
+                    <div style="font-size:0.82rem;color:#94a3b8;">Innovación • Tecnología • Soluciones — Soberanía Mecatrónica e IA</div>
+                </div>
+            </div>
+            <h1>DOSSIER EJECUTIVO LEGISLATIVO: PROYECTO INANNA V2</h1>
+            <div class="subtitle">Declaración de Interés Municipal y Designación de <strong>Inanna</strong> y <strong>Fabio Maximiliano Medina Rojas</strong> como Embajadora y Embajador de la Robótica y la Inteligencia Artificial de la Ciudad de Río Cuarto</div>
+            <div class="destinatario-badge">🏛️ Elevado al Concejo Deliberante de la Ciudad de Río Cuarto • Presidencia: Sra. Ana Laura Medina</div>
+        </div>
+    </header>
+
+    <div class="action-bar">
+        <div class="action-group">
+            <a href="Proyecto_Ordenanza_Rio_Cuarto_Inanna_Embajadores_FINAL.docx" download class="btn btn-gold">📥 Descargar Proyecto de Ordenanza (.DOCX)</a>
+            <a href="Informe_Integral_Trayectoria_y_Analisis_Rio_Cuarto_INANNA.docx" download class="btn btn-cyan">📄 Descargar Informe Integral (.DOCX)</a>
+        </div>
+        <div class="action-group">
+            <button type="button" class="btn btn-outline" onclick="compartirDossier()">📲 Compartir Enlace</button>
+            <button type="button" class="btn btn-outline" onclick="window.print()">🖨️ Imprimir / PDF</button>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button type="button" class="tab-btn active" onclick="cambiarTab('resumen', this)">📊 1. Dossier Ejecutivo &amp; Alcance Global</button>
+        <button type="button" class="tab-btn" onclick="cambiarTab('ordenanza', this)">📜 2. Texto Completo: Nota de Elevación y Proyecto de Ordenanza</button>
+    </div>
+
+    <!-- ================= TAB 1: DOSSIER EJECUTIVO ================= -->
+    <div id="tab-resumen" class="tab-panel active">
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-num">1,92 m • 26 DoF</div>
+                <div class="kpi-label">1.° Robot Humanoide de escala real impreso en 3D y programado en Río Cuarto (Red Neuronal 100% Offline de 1,6 ms).</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-num">UNESCO + NASA</div>
+                <div class="kpi-label">Publicada en <code>unesco.org</code> (16/11) + <strong>1.° Puesto</strong> Auditoría Técnica Oficial en <em>The 2026 NASA Space Apps Challenge</em>.</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-num">9 + ~15 Escuelas</div>
+                <div class="kpi-label"><strong>+2.000 estudiantes</strong> ya impactados en 9 colegios + <strong>~15 escuelas nuevas y geriátricos</strong> en agenda activa.</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-num">Top 1 SEO Web</div>
+                <div class="kpi-label">Posicionamiento 100% orgánico en <em>La Voz del Interior, Puntal, LV16, Telediario</em>, TV, Radio e invitaciones a 4 países.</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>1. Cuna Riocuartense y Soberanía Tecnológica</h2>
+            <p>
+                El proyecto <strong>Inanna</strong> tuvo su punto de partida académico en la asignatura <em>Robótica e Inteligencia Artificial</em> (Prof. Jorge Estrella) de la Tecnicatura Superior en Mecatrónica en el ITEC, en nuestra ciudad, y fue concebido, diseñado, impreso en 3D y evolucionado íntegramente en el taller local montado en el domicilio de su creador e ideólogo principal, <strong>Fabio Maximiliano Medina Rojas</strong> (fundador de <strong>INANNA COMPANY</strong>), honrando los cimientos globales de ciencia abierta inspirados en el pionero francés Gaël Langevin (<em>InMoov</em>).
+            </p>
+            <p>
+                En su arquitectura actual <strong>Inanna V2</strong>, constituye un desarrollo soberano inédito en el interior del país: integra un cerebelo determinista en tiempo real en lenguaje C nativo y FreeRTOS sobre microcontroladores ESP32-S inmune a picos electromagnéticos de 20 A, visión computacional neuronal a 106 FPS con mirada viva biológica, radar Doppler de presencia humana de 24 GHz, consola web táctil de 1 ms, Gemelo Digital 3D en ROS 2 y una <strong>Red Neuronal Clasificadora Local propia</strong> alojada en su torso (28,5 MB de RAM, 99,2% de exactitud) que dialoga <strong>100% sin conexión a internet</strong>, resguardando de forma absoluta la privacidad de niñas, niños, jóvenes y adultos mayores.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Trayectoria Cronológica Verificada de Eventos, Ordenanzas y Cumbres (2026)</h2>
+            <ul>
+                <li><strong>Exposición Rural de la Sociedad Rural de Río Cuarto &amp; Convención Juvenil Plus Ultra (Septiembre 2026):</strong> Invitación oficial junto a la Secretaría de Turismo y Deporte Municipal ante el Gobernador <strong>Martín Llaryora</strong>, el Intendente <strong>Guillermo De Rivas</strong> y miles de vecinos; más presentación escénica de arte digital, impresión 3D e IA en la convención juvenil <em>Plus Ultra</em>.</li>
+                <li><strong>Gira Educativa STEAM e Intergeneracional (Septiembre – Noviembre 2026 y en curso):</strong> <strong>9 establecimientos educativos ya visitados</strong> alcanzando a <strong>más de 2.000 estudiantes</strong>: <em>Colegio Florentino Ameghino</em> (doble turno), <em>ESFP Orientación Agro</em>, <em>Colegio Leopoldo Lugones</em>, <em>Instituto Superior María Inmaculada (ISMI)</em> e <em>Instituto Educativo Jockey Club</em> en Río Cuarto; <em>Escuelas Saturnina Rodríguez de Zavalía</em>, <em>Cornelio Saavedra</em> (doble turno) e <em>IPEA N° 215</em> en Holmberg; <em>98.° Aniversario del C.E. Perito Francisco Moreno</em> en Alcira Gigena (19/10); y <em>Encuentro Regional de Adultos Mayores</em> (16/10).</li>
+            </ul>
+
+            <div class="highlight-agenda">
+                <strong>📅 Agenda Social, Educativa e Intergeneracional en Curso:</strong> Actualmente, Fabio Maximiliano Medina Rojas e Inanna cuentan con <strong>aproximadamente 15 nuevos establecimientos educativos agendados para visitar</strong> en Río Cuarto y la región, junto con un cronograma solidario de <strong>visitas interactivas, recreativas y de acompañamiento afectivo a geriátricos y residencias de adultos mayores</strong>, tendiendo un puente humano único entre la niñez y nuestros abuelos.
+            </div>
+
+            <ul>
+                <li><strong>Río Cuarto Emprende 2026 — CECIS Río Cuarto (08/10/2026):</strong> Hito inédito nacional e iberoamericano: primera co-conducción escénica en vivo de un robot humanoide junto a una locutora profesional ante más de 300 empresarios y emprendedores, presentando paneles junto a Andreani, Tiendanube y UCC.</li>
+                <li><strong>Feria del Libro "Juan Filloy" 2026 — Subsecretaría de Cultura Municipal (10/10/2026, Ex Palacio de Justicia):</strong> Tres obras teatrales robóticas de fomento a la lectura, actuación junto a la escritora riocuartense <strong>Bachi Salas</strong> y 18 cápsulas reflexivas en homenaje a Juan Filloy, el libro de papel y el pensamiento crítico.</li>
+                <li><strong>Ordenanza Municipal Sancionada y Aprobada en Santa Catalina — Holmberg (Octubre 2026):</strong> El Honorable Concejo Deliberante de Santa Catalina (Holmberg) <strong>ya sancionó y aprobó por Ordenanza</strong> la Declaración de <em>Interés Cultural, Educativo, Científico y Tecnológico Municipal</em> al Proyecto Inanna y el otorgamiento de la <em>Distinción al Mérito Técnico y Comunitario</em>.</li>
+                <li><strong>Inauguración del New HQ &amp; Training Center de Humandroid (11/11/2026, Córdoba Capital):</strong> Invitación destacada en el <strong>centro de entrenamiento de robots humanoides más grande de Latinoamérica</strong>, disertando y exhibiendo ingeniería riocuartense junto a referentes globales de <strong>NVIDIA, Oracle, Amazon Web Services (AWS), Binbash, TGN, Y-TEC (YPF)</strong> y universidades (<strong>UTN, UNC, Siglo 21 y UCA</strong>).</li>
+            </ul>
+
+            <div class="nasa-box">
+                <h3>🚀 Reseña Oficial y 1.° Puesto Técnico en The 2026 NASA International Space Apps Challenge (14–15/11/2026)</h3>
+                <p style="margin-bottom:0.65rem;">
+                    <strong>¿Qué significa The 2026 NASA Space Apps Challenge?:</strong> Creado en 2012 e impulsado por la Dirección de Misiones Científicas (<em>Science Mission Directorate</em>) de la <strong>NASA</strong> desde Washington D. C. en alianza con <strong>17 Agencias Espaciales Internacionales</strong> —incluyendo la <strong>CONAE (Argentina)</strong>, <strong>ESA (Europa)</strong>, <strong>JAXA (Japón)</strong>, <strong>CSA (Canadá)</strong> y <strong>AEB (Brasil)</strong>—, es la cumbre global de innovación abierta, ciencia aeroespacial y observación terrestre más grande de la historia humana. Bajo el lema <em>«The Next Frontier»</em>, la edición 2026 alcanzó el récord histórico mundial de <strong>181.835 participantes en 593 sedes oficiales</strong> de casi 190 países y territorios.
+                </p>
+                <p style="margin-bottom:0;">
+                    <strong>Participación Riocuartense y 1.° Puesto Actual:</strong> Representando a Río Cuarto en la sede regional de Santa Rosa de Calamuchita, <strong>Fabio Maximiliano Medina Rojas</strong> lideró junto a <strong>Agustín Alejandro Debia</strong> e <strong>Iván David Coria</strong> el equipo oficial <code>INANNA COMPANY</code>, desarrollando en 48 horas la plataforma trilingüe <code>TERRA-SHIFT SCADA &amp; IIoT</code> (telemetría satelital NASA POWER/GIBS en vivo, proyecciones CMIP6, nodos solares rurales ESP32/LoRa/4–20 mA NAMUR NE43 sin internet y guía hablada con la voz neuronal de <strong>Inanna</strong>). En el reporte oficial de auditoría técnica pre-jurado (<code>SPACEAPPS-ANALYZER</code>, 17/11/2026), el equipo alcanzó el <strong>🥇 1.° Puesto absoluto sobre los 13 equipos de la sede</strong> (<code>✓ Aprobado</code>, <code>0 discrepancias</code>, <code>59%</code> de señal técnica y <code>64%</code> de cobertura científica) rumbo a los <em>Global Nominees</em> de la NASA, iniciando además las gestiones para postular a <strong>Río Cuarto como Sede Oficial 2027</strong>.
+                </p>
+            </div>
+
+            <ul>
+                <li><strong>IV Foro Internacional de Ciudades del Aprendizaje — UNESCO y Publicación en <code>unesco.org</code> (16 al 18/11/2026, Centro de Convenciones Córdoba):</strong> Discurso protocolar de apertura ante alcaldes, intendentes, autoridades del <strong>Instituto UIL-UNESCO</strong> y delegaciones de <strong>67 ciudades de 12 países</strong>, saludos diplomáticos bilingües a comitivas de <strong>EE. UU. (inglés), Brasil (portugués) y China (mandarín)</strong>, publicación el lunes 16/11 en la <strong>web oficial mundial de la UNESCO (<code>unesco.org</code>)</strong> e invitaciones formales recibidas para presentar a Inanna en <strong>Estados Unidos, Chile, Colombia y Honduras</strong>.</li>
+                <li><strong>Master Class CPI Córdoba &amp; Universidad de Congreso (18/11/2026, Río Cuarto):</strong> Apertura protocolar y discurso de cierre magistral sobre arquitectura de datos, ética algorítmica (<em>Human-in-the-loop</em>), literatura de Borges y trato humano irremplazable.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Relevamiento de Medios, Redes y Posicionamiento Web (SEO Marca Ciudad)</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <h4>🌍 Dominios Globales y Portales Oficiales</h4>
+                    <p>• <strong>UNESCO Oficial (<code>unesco.org</code> / UIL):</strong> Publicación internacional desde el lunes 16/11/2026 (Autoridad de Dominio Mundial DA 93/100).</p>
+                    <p>• <strong>NASA Space Apps (<code>spaceappschallenge.org</code>):</strong> Página verificada del equipo riocuartense auditado en <strong>1.° Puesto Técnico</strong>.</p>
+                    <p>• <strong>Municipalidad de Córdoba (<code>cordoba.gob.ar</code> / <code>@cordobaeduca</code>):</strong> Cobertura oficial ante la Red Latinoamericana de 67 ciudades.</p>
+                </div>
+                <div class="media-card">
+                    <h4>📰 Prensa Gráfica y Portales Digitales</h4>
+                    <p>• <strong>La Voz del Interior (15/10/2026):</strong> <em>«La primera robot de Río Cuarto visita escuelas con un "mensaje humanista"»</em>.</p>
+                    <p>• <strong>Diario Puntal (20 y 21/08/2026):</strong> <em>«Tiene una personalidad propia: así es INANNA...»</em> e <em>«Inanna: la robot riocuartense que ya puede interactuar...»</em>.</p>
+                    <p>• <strong>LV16.com (18/08 y 17/11/2026):</strong> <em>«Inanna... furor en el cuarto Foro de Ciudades del Aprendizaje...»</em>.</p>
+                    <p>• <strong>Otros medios digitales:</strong> <em>Telediario Digital</em> (20/08), <em>Sin Libreto</em>, <em>Hoy Día Córdoba</em>, <em>Exa Media</em>, <em>Agencia Nacional Realpolitik</em> y <em>Agencia La Rioja</em>.</p>
+                </div>
+                <div class="media-card">
+                    <h4>📺 Televisión, Streaming y Radio en Vivo</h4>
+                    <p>• <strong>Televisión:</strong> Entrevistas en estudio en <strong>Canal 13 Río Cuarto (Telediario TV)</strong>, <strong>Canal 4</strong> y <strong>Sin Libreto</strong> (Gabriel Martella).</p>
+                    <p>• <strong>Radio:</strong> <strong>LV16 Radio Río Cuarto</strong> y doble turno interactivo en vivo en <strong>Radio Lola</strong> (Fabricio López y Pablo García).</p>
+                    <p>• <strong>Proyección Nacional:</strong> Cápsulas dedicadas para <strong>TN Tecno</strong>, <strong>Vorterix (Mario Pergolini)</strong> y <strong>Diego Ramos</strong>.</p>
+                </div>
+                <div class="media-card">
+                    <h4>📈 SEO Web, YouTube y Efecto Multiplicador en 12 Países</h4>
+                    <p>• <strong>Top 1 Orgánico en Google y Motores IA:</strong> El 100% de las búsquedas de <em>"Inanna robot"</em> posicionan orgánicamente a <strong>Río Cuarto</strong> como polo de robótica humanoide e IA sin pauta publicitaria paga (100% <em>Earned Media</em>).</p>
+                    <p>• <strong>YouTube, Instagram (<code>@yosoy.inanna</code>) y TikTok:</strong> Documentales bilingües (<em>«Inanna: The Robot from Río Cuarto»</em>), reels virales y fotografías replicadas por alcaldes, diplomáticos y referentes tech (NVIDIA, Oracle, AWS) de América, Europa y Asia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Síntesis del Articulado Propuesto al Concejo Deliberante de Río Cuarto</h2>
+            <div class="ordinance-box">
+                <div class="art"><strong>ARTÍCULO 1°.-</strong> Declarar de <em>Interés Legislativo, Científico, Tecnológico, Educativo, Cultural, Social y Productivo Municipal</em> al <strong>Proyecto "Inanna" (Inanna V2)</strong>.</div>
+                <div class="art"><strong>ARTÍCULO 2°.-</strong> Otorgar al ciudadano y Técnico Superior en Mecatrónica <strong>Fabio Maximiliano Medina Rojas</strong> el título honorífico de <em>"Embajador de la Robótica, la Mecatrónica y la Inteligencia Artificial de la Ciudad de Río Cuarto"</em>.</div>
+                <div class="art"><strong>ARTÍCULO 3°.-</strong> Designar conjuntamente al robot humanoide <strong>Inanna</strong> como <em>"Embajadora Tecnológica, Educativa y Cultural de la Robótica y la Inteligencia Artificial de la Ciudad de Río Cuarto"</em>.</div>
+                <div class="art"><strong>ARTÍCULO 4°.-</strong> Facultar al Departamento Ejecutivo Municipal (áreas de Educación, Cultura, Desarrollo Humano, Desarrollo Económico, Ciencia, Juventud, Personas Mayores y Turismo) a articular junto a los Embajadores el ciclo itinerante <em>"Río Cuarto Crea Futuro: Robótica e Inteligencia Artificial con Sentido Humano"</em> en escuelas, <strong>residencias geriátricas y centros de adultos mayores</strong>, ferias y eventos estratégicos locales.</div>
+                <div class="art" style="margin-bottom:0;"><strong>ARTÍCULO 5°.-</strong> Disponer un Acto Público Especial en el Recinto del Concejo Deliberante de Río Cuarto para la entrega formal de diplomas de honor, atributos institucionales y copia autenticada de la Ordenanza a Fabio Maximiliano Medina Rojas y a Inanna.</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ================= TAB 2: PROYECTO DE ORDENANZA COMPLETO ================= -->
+    <div id="tab-ordenanza" class="tab-panel">
+        <div class="legal-doc">
+            <h2 style="margin-top:0;">PARTE I: NOTA DE ELEVACIÓN FORMAL POR MESA DE ENTRADAS</h2>
+            <div class="doc-right">Río Cuarto, Córdoba, 18 de noviembre de 2026.</div>
+            <div class="doc-dest">
+                A LA SEÑORA PRESIDENTA DEL<br>
+                CONCEJO DELIBERANTE DE LA CIUDAD DE RÍO CUARTO<br>
+                Sra. Ana Laura Medina<br>
+                S &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D
+            </div>
+            <p><strong style="color:var(--gold);">Ref.:</strong> Presentación de Proyecto de Ordenanza — Declaración de Interés Municipal al Proyecto de Robótica Humanoide <em>“Inanna”</em> y designación como Embajador y Embajadora de la Robótica y la Inteligencia Artificial de la Ciudad de Río Cuarto.</p>
+            <p>De mi mayor consideración:</p>
+            <p>Tengo el agrado de dirigirme a usted y, por su digno intermedio, a las señoras y señores concejales que integran ese Honorable Cuerpo Legislativo, a fin de elevar para su formal ingreso parlamentario y tratamiento en comisiones el adjunto <strong>Proyecto de Ordenanza</strong> —acompañado de su Anexo Único Documental de Antecedentes, Medios y Posicionamiento Global—, mediante el cual se propone declarar de Interés Legislativo, Científico, Tecnológico, Educativo, Cultural, Social y Productivo Municipal al Proyecto <strong>“Inanna” (Inanna V2)</strong>, primer robot humanoide de escala real (1,92 m) impreso en 3D y programado con inteligencia artificial propia en nuestra ciudad; y designar oficialmente al Técnico Superior en Mecatrónica <strong>Fabio Maximiliano Medina Rojas</strong> y al robot humanoide <strong>Inanna</strong> como Embajador y Embajadora de la Robótica y la Inteligencia Artificial de la Ciudad de Río Cuarto.</p>
+            <p>Gestada en el ámbito de la formación técnica superior en Mecatrónica en el ITEC, en nuestra ciudad, y evolucionada íntegramente en nuestro taller local montado en el domicilio de Fabio Maximiliano Medina Rojas hasta consolidar una arquitectura mecatrónica y neuronal 100% soberana e inédita en el interior del país, Inanna se ha convertido en un estandarte vivo del talento innovador riocuartense.</p>
+            <p>A lo largo del presente año, el proyecto ya ha recorrido nueve instituciones educativas de Río Cuarto y la región —inspirando cara a cara a más de 2.000 niñas, niños y jóvenes y manteniendo actualmente en agenda alrededor de quince nuevos establecimientos escolares y visitas solidarias e intergeneracionales a geriátricos y residencias de adultos mayores—; ha protagonizado en el CECIS la primera co-conducción en vivo de un robot humanoide en el país durante Río Cuarto Emprende 2026; ha participado de forma destacada en la Feria del Libro Juan Filloy 2026, en la Exposición Rural de Río Cuarto y en la Universidad de Congreso; y ha representado con orgullo a nuestra ciudad en las instancias más exigentes del continente y del mundo: la inauguración del centro de entrenamiento de robots humanoides más grande de Latinoamérica (New HQ Humandroid Córdoba, junto a referentes de NVIDIA, Oracle y AWS); la obtención del 1.° Puesto actual en la auditoría técnica oficial del hackathon mundial NASA International Space Apps Challenge 2026 (liderando desde Río Cuarto el equipo integrado junto a Agustín Alejandro Debia e Iván David Coria, con guía de voz neuronal de Inanna, e impulsando a Río Cuarto como Sede Oficial 2027); y la apertura oficial del IV Foro Internacional de Ciudades del Aprendizaje de la UNESCO ante delegaciones de sesenta y siete ciudades de doce países, hito que escaló el lunes 16 de noviembre hasta la página web oficial de la UNESCO (<code>unesco.org</code>) y abrió invitaciones internacionales para presentar este desarrollo riocuartense en Estados Unidos, Chile, Colombia y Honduras.</p>
+            <p>Asimismo, sumado al valioso antecedente de que el Honorable Concejo Deliberante de Santa Catalina (Holmberg) ya sancionó y aprobó por Ordenanza su Declaración de Interés Municipal, resulta de especial trascendencia institucional que Río Cuarto —su ciudad natal y el suelo desde el cual proyecta innovación al mundo— consagre formalmente a Inanna y a su creador como sus Embajadores.</p>
+            <p>Quedando a entera disposición de la Presidencia y de los distintos bloques parlamentarios para ampliar fundamentos y realizar una demostración presencial en vivo de Inanna ante las comisiones o el pleno del Cuerpo, saludo a usted con mi consideración más distinguida.</p>
+
+            <hr style="border:none;border-top:1px solid #263348;margin:2rem 0;">
+
+            <h2>PARTE II: PROYECTO DE ORDENANZA</h2>
+            <p><strong style="color:var(--gold);">VISTO:</strong></p>
+            <p>El histórico desarrollo en nuestra ciudad de <strong>Inanna (Inanna V2)</strong>, el primer robot humanoide de escala real (1,92 metros) con arquitectura mecatrónica e inteligencia artificial propia de Río Cuarto y la región, concebido, diseñado, impreso en 3D y programado por el Técnico Superior en Mecatrónica <strong>Fabio Maximiliano Medina Rojas</strong> (fundador de INANNA COMPANY); su extraordinaria labor educativa, cultural, intergeneracional y científica en escuelas, residencias de adultos mayores e instituciones locales, su impacto en medios nacionales y posicionamiento digital, y su consagratoria representación de la Ciudad de Río Cuarto en congresos tecnológicos continentales, en el NASA Space Apps Challenge y en el IV Foro Internacional de Ciudades del Aprendizaje de la UNESCO; y</p>
+
+            <p><strong style="color:var(--gold);">CONSIDERANDO:</strong></p>
+            <p>Que en virtud de los principios consagrados en la Carta Orgánica Municipal de la Ciudad de Río Cuarto, constituye un deber primordial del Estado Municipal y de este Concejo Deliberante promover la ciencia, la innovación tecnológica, la educación, la cultura del trabajo y el reconocimiento público de aquellos ciudadanos y desarrollos locales que proyectan con excelencia la identidad de Río Cuarto a nivel provincial, nacional e internacional.</p>
+            <p>Que el proyecto Inanna tuvo su punto de partida académico en nuestra ciudad como trabajo final de la asignatura Robótica e Inteligencia Artificial, dictada por el profesor Jorge Estrella en la carrera de Tecnicatura Superior en Mecatrónica (ITEC Río Cuarto), con la participación inicial junto a su creador e ideólogo principal, Fabio Maximiliano Medina Rojas, de los jóvenes Agustín Alejandro Debia, Guillermo Tissera, María Luz Guzmán y Martina Etchart.</p>
+            <p>Que, honrando los cimientos globales de la ciencia abierta inspirados en el pionero francés Gaël Langevin (proyecto InMoov), Fabio Maximiliano Medina Rojas desarrolló íntegramente desde su taller en la ciudad de Río Cuarto una profunda evolución de ingeniería soberana denominada Inanna V2, dotando al humanoide de 1,92 metros de estatura, 26 grados de libertad activos, manos antropomórficas traccionadas por tendones, reducciones mecánicas propias de alto par en hombros (&gt; 102 kg·cm), cerebelo determinista C/FreeRTOS sobre ESP32-S inmune al ruido electromagnético, visión computacional a 106 FPS, Gemelo Digital en ROS 2 y una Red Neuronal Clasificadora Local propia que opera 100% sin conexión a internet (28,5 MB RAM, 1,6 ms), garantizando la privacidad absoluta de los datos.</p>
+            <p>Que uno de los pilares más admirables del proyecto radica en su profunda vocación pedagógica, social, solidaria e intergeneracional, materializada en una gira que ya ha visitado nueve establecimientos educativos de Río Cuarto y el sur provincial —Colegio Florentino Ameghino, ESFP Orientación Agro, Colegio Leopoldo Lugones, ISMI e Instituto Educativo Jockey Club en nuestra ciudad; Escuelas Saturnina Rodríguez de Zavalía, Cornelio Saavedra e IPEA N° 215 en Holmberg; y el 98.° Aniversario del C.E. Perito Francisco Moreno de Alcira Gigena—, donde más de 2.000 niñas, niños y jóvenes interactuaron con Inanna despertando vocaciones STEAM, contando además actualmente con una agenda activa de aproximadamente quince nuevas escuelas por visitar y un cronograma de encuentros afectivos, recreativos e intergeneracionales en geriátricos y residencias de adultos mayores.</p>
+            <p>Que en nuestra ciudad protagonizó obras teatrales de fomento a la lectura en la Feria del Libro “Juan Filloy” 2026 junto a la escritora Bachi Salas; marcó un hito nacional el 8 de octubre de 2026 como primera co-conductora humanoide en vivo durante Río Cuarto Emprende 2026 en el CECIS ante más de 300 empresarios; participó en la Exposición Rural de Río Cuarto ante el Gobernador Martín Llaryora y el Intendente Guillermo De Rivas; y encabezó la apertura y cierre de la Master Class del CPI Córdoba en la Universidad de Congreso.</p>
+            <p>Que a escala continental y global representó a Río Cuarto el 11 de noviembre de 2026 en la inauguración del New HQ &amp; Training Center de Humandroid en Córdoba (junto a referentes de NVIDIA, Oracle y AWS); obtuvo los días 14 y 15 de noviembre de 2026 el 1.° Puesto absoluto en la auditoría técnica oficial de <em>The 2026 NASA International Space Apps Challenge</em> (récord mundial de 181.835 participantes en 593 sedes junto a 17 agencias espaciales incluida CONAE), liderando junto a Agustín Alejandro Debia e Iván David Coria el sistema <code>TERRA-SHIFT SCADA &amp; IIoT</code> e impulsando a Río Cuarto como Sede Oficial 2027; y brindó el 16 de noviembre de 2026 el discurso protocolar de apertura del IV Foro de Ciudades del Aprendizaje de la UNESCO ante 67 ciudades de 12 países, alcanzando publicación en <code>unesco.org</code>, posicionamiento SEO Top 1 para Río Cuarto e invitaciones internacionales desde Estados Unidos, Chile, Colombia y Honduras.</p>
+            <p>Que, habiendo sido el proyecto ya declarado oficialmente de Interés Municipal mediante Ordenanza aprobada por el Honorable Concejo Deliberante de Santa Catalina (Holmberg), corresponde que este Concejo Deliberante de la Ciudad de Río Cuarto otorgue el máximo respaldo institucional al desarrollo nacido en nuestra ciudad y confiera a su creador y a su obra la investidura oficial de Embajadores.</p>
+
+            <p><strong style="color:var(--gold);">POR ELLO:</strong></p>
+            <div class="sancion">
+                EL CONCEJO DELIBERANTE DE LA CIUDAD DE RÍO CUARTO<br>
+                SANCIONA CON FUERZA DE ORDENANZA:
+            </div>
+
+            <div class="art"><strong>ARTÍCULO 1°.-</strong> <strong>DECLÁRESE</strong> de Interés Legislativo, Científico, Tecnológico, Educativo, Cultural, Social y Productivo Municipal al Proyecto <strong>“Inanna” (Inanna V2)</strong>, primer robot humanoide de escala real (1,92 metros) diseñado, impreso en 3D, ensamblado y programado con arquitectura mecatrónica e inteligencia artificial propia en la Ciudad de Río Cuarto, en mérito a su aporte pionero a la soberanía tecnológica, la divulgación de las disciplinas STEAM y la promoción de una visión ética y humanista de la ciencia.</div>
+            <div class="art"><strong>ARTÍCULO 2°.-</strong> <strong>OTÓRGUESE</strong> al ciudadano y Técnico Superior en Mecatrónica <strong>Fabio Maximiliano Medina Rojas</strong> el título honorífico de <strong>“Embajador de la Robótica, la Mecatrónica y la Inteligencia Artificial de la Ciudad de Río Cuarto”</strong>, en reconocimiento a su excelencia técnica, perseverancia creadora, compromiso educativo ad honorem y destacada labor de representación de nuestra ciudad en foros provinciales, nacionales e internacionales.</div>
+            <div class="art"><strong>ARTÍCULO 3°.-</strong> <strong>DESÍGNESE</strong> de manera conjunta al robot humanoide <strong>Inanna</strong> como <strong>“Embajadora Tecnológica, Educativa y Cultural de la Robótica y la Inteligencia Artificial de la Ciudad de Río Cuarto”</strong>, instituyéndola como estandarte simbólico e interactivo del talento innovador, la educación técnica y la creatividad riocuartense.</div>
+            <div class="art"><strong>ARTÍCULO 4°.-</strong> <strong>FACÚLTESE</strong> e invítese al Departamento Ejecutivo Municipal, a través de las Secretarías y Subsecretarías con competencia en Educación, Cultura, Desarrollo Humano, Desarrollo Económico, Ciencia, Juventud, Personas Mayores y Turismo, a articular junto a los Embajadores designados en los Artículos 2° y 3° el ciclo itinerante <strong>“Río Cuarto Crea Futuro: Robótica e Inteligencia Artificial con Sentido Humano”</strong>, destinado a propiciar charlas demostrativas, talleres vocacionales STEAM en instituciones educativas, encuentros intergeneracionales y de acompañamiento afectivo en residencias geriátricas y centros de adultos mayores, y la participación protocolar de Inanna en ferias, congresos y eventos estratégicos locales.</div>
+            <div class="art"><strong>ARTÍCULO 5°.-</strong> <strong>DISPÓNGASE</strong> la realización de un Acto Público Especial en el Recinto de Sesiones del Concejo Deliberante de la Ciudad de Río Cuarto para la entrega formal de los diplomas de honor, atributos institucionales y copia autenticada de la presente Ordenanza a Fabio Maximiliano Medina Rojas y a Inanna, cursándose invitación al Departamento Ejecutivo Municipal, autoridades educativas, científicas y comunidad en general.</div>
+            <div class="art"><strong>ARTÍCULO 6°.-</strong> <strong>REMÍTASE</strong> copia oficial de la presente Ordenanza al Departamento Ejecutivo Municipal, a la Secretaría de Desarrollo Humano, Educación y Cultura Municipal, al Ministerio de Educación y al Ministerio de Producción, Ciencia e Innovación Tecnológica de la Provincia de Córdoba.</div>
+            <div class="art"><strong>ARTÍCULO 7°.-</strong> Comuníquese, publíquese, regístrese y archívese.</div>
+        </div>
+    </div>
+
+    <footer>
+        <span><strong>Fabio Maximiliano Medina Rojas</strong> • Técnico Superior en Mecatrónica • Fundador de <strong>INANNA COMPANY</strong></span>
+        <span>Río Cuarto, Córdoba, Argentina • Instagram: <strong>@yosoy.inanna</strong> • inannacompany@gmail.com</span>
+    </footer>
+</div>
+
+<div id="toast" class="toast">✓ Enlace del Dossier Ejecutivo copiado al portapapeles</div>
+
+<script>
+    function cambiarTab(id, btn) {
+        document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+        document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+        document.getElementById('tab-' + id).classList.add('active');
+        btn.classList.add('active');
+    }
+
+    function compartirDossier() {
+        var shareUrl = "https://inanna-company.github.io/concejo-rio-cuarto/";
+        var shareData = {
+            title: "Dossier Ejecutivo Legislativo • Proyecto Inanna Embajadores de Río Cuarto",
+            text: "Dossier Ejecutivo, Impacto Global (UNESCO + NASA Space Apps 2026) y Proyecto de Ordenanza ante el Concejo Deliberante de Río Cuarto — Inanna V2 & Fabio Maximiliano Medina Rojas.",
+            url: shareUrl
+        };
+        if (navigator.share) {
+            navigator.share(shareData).catch(function() {});
+        } else if (navigator.clipboard) {
+            navigator.clipboard.writeText(shareUrl).then(function() {
+                var t = document.getElementById('toast');
+                t.style.display = 'block';
+                setTimeout(function() { t.style.display = 'none'; }, 3000);
+            });
+        }
+    }
+</script>
+</body>
+</html>

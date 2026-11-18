@@ -23,6 +23,7 @@
             --gold-soft: rgba(255, 215, 0, 0.35);
             --blue: #1890ff;
             --cyan: #00b8e6;
+            --cyan-light: #38bdf8;
             --cyan-soft: rgba(0, 184, 230, 0.35);
             --green: #10b981;
             --white: #FFFFFF;
@@ -37,6 +38,23 @@
             color: var(--white);
             line-height: 1.65;
             padding: 1.8rem 1rem 3rem;
+        }
+        a.ext-link {
+            color: var(--cyan-light);
+            text-decoration: underline;
+            text-decoration-color: rgba(56, 189, 248, 0.45);
+            text-underline-offset: 3px;
+            font-weight: 600;
+            transition: color 0.15s ease, text-decoration-color 0.15s ease;
+        }
+        a.ext-link:hover {
+            color: var(--gold);
+            text-decoration-color: var(--gold);
+        }
+        a.ext-link::after {
+            content: " ↗";
+            font-size: 0.78em;
+            opacity: 0.85;
         }
         .top-nav {
             max-width: 1080px;
@@ -156,10 +174,10 @@
             display: inline-flex;
             align-items: center;
             gap: 0.45rem;
-            padding: 0.68rem 1.1rem;
+            padding: 0.68rem 1.05rem;
             border-radius: 8px;
             font-weight: 700;
-            font-size: 0.88rem;
+            font-size: 0.87rem;
             cursor: pointer;
             text-decoration: none;
             border: 1px solid transparent;
@@ -175,6 +193,11 @@
             background: rgba(0, 184, 230, 0.15);
             color: #7dd3fc;
             border-color: var(--cyan-soft);
+        }
+        .btn-ig {
+            background: linear-gradient(135deg, rgba(225, 48, 108, 0.22), rgba(131, 58, 180, 0.22));
+            color: #fbcfe8;
+            border-color: rgba(244, 114, 182, 0.45);
         }
         .btn-outline {
             background: #131c2b;
@@ -301,17 +324,18 @@
             border: 1px solid var(--border);
             border-left: 4px solid var(--cyan);
             border-radius: 10px;
-            padding: 1.2rem;
+            padding: 1.25rem;
         }
         .media-card h4 {
             color: var(--gold);
-            margin-bottom: 0.55rem;
+            margin-bottom: 0.65rem;
             font-size: 1rem;
         }
         .media-card p {
-            font-size: 0.91rem;
-            margin-bottom: 0.45rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.58rem;
             text-align: left;
+            line-height: 1.5;
         }
         .ordinance-box {
             background: var(--bg-deep);
@@ -389,7 +413,7 @@
             .tab-panel { display: block !important; margin-bottom: 2rem; }
             .container { box-shadow: none; border: none; background: #fff !important; padding: 0; max-width: 100%; }
             h1, h2, .kpi-num, .art strong, .media-card h4, .legal-doc .doc-dest, .legal-doc .sancion { color: #0f172a !important; }
-            h3, .brand-tag { color: #0369a1 !important; }
+            h3, .brand-tag, a.ext-link { color: #0369a1 !important; }
             p, ul li, .subtitle, .kpi-label, .art, .legal-doc .doc-right { color: #1e293b !important; }
             .kpi-card, .ordinance-box, .media-card, .nasa-box, .highlight-agenda, .legal-doc {
                 background: #f8fafc !important;
@@ -410,7 +434,7 @@
     <header>
         <div>
             <div class="brand-row">
-                <img src="../assets/inanna-isotipo.jpg" onerror="this.src='https://inanna-company.github.io/assets/inanna-isotipo.jpg'" alt="INANNA COMPANY" class="brand-logo">
+                <img src="https://inanna-company.github.io/assets/inanna-isotipo.jpg" alt="INANNA COMPANY" class="brand-logo">
                 <div>
                     <div class="brand-tag">INANNA COMPANY • ROBOTICS • AI • ACADEMY • RÍO CUARTO</div>
                     <div style="font-size:0.82rem;color:#94a3b8;">Innovación • Tecnología • Soluciones — Soberanía Mecatrónica e IA</div>
@@ -426,6 +450,7 @@
         <div class="action-group">
             <a href="Proyecto_Ordenanza_Rio_Cuarto_Inanna_Embajadores_FINAL.docx" download class="btn btn-gold">📥 Descargar Proyecto de Ordenanza (.DOCX)</a>
             <a href="Informe_Integral_Trayectoria_y_Analisis_Rio_Cuarto_INANNA.docx" download class="btn btn-cyan">📄 Descargar Informe Integral (.DOCX)</a>
+            <a href="https://www.instagram.com/yosoy.inanna/" target="_blank" rel="noopener noreferrer" class="btn btn-ig">📸 Instagram @yosoy.inanna ↗</a>
         </div>
         <div class="action-group">
             <button type="button" class="btn btn-outline" onclick="compartirDossier()">📲 Compartir Enlace</button>
@@ -434,7 +459,7 @@
     </div>
 
     <div class="tabs">
-        <button type="button" class="tab-btn active" onclick="cambiarTab('resumen', this)">📊 1. Dossier Ejecutivo &amp; Alcance Global</button>
+        <button type="button" class="tab-btn active" onclick="cambiarTab('resumen', this)">📊 1. Dossier Ejecutivo &amp; Publicaciones Verificadas</button>
         <button type="button" class="tab-btn" onclick="cambiarTab('ordenanza', this)">📜 2. Texto Completo: Nota de Elevación y Proyecto de Ordenanza</button>
     </div>
 
@@ -447,7 +472,7 @@
             </div>
             <div class="kpi-card">
                 <div class="kpi-num">UNESCO + NASA</div>
-                <div class="kpi-label">Publicada en <code>unesco.org</code> (16/11) + <strong>1.° Puesto</strong> Auditoría Técnica Oficial en <em>The 2026 NASA Space Apps Challenge</em>.</div>
+                <div class="kpi-label">Publicada en <a href="https://www.uil.unesco.org/es/learning-cities/cordoba" target="_blank" rel="noopener noreferrer" class="ext-link">unesco.org</a> + <strong>1.° Puesto</strong> Auditoría Técnica en <a href="https://www.spaceappschallenge.org/2026/find-a-team/inanna-company/" target="_blank" rel="noopener noreferrer" class="ext-link">NASA Space Apps 2026</a>.</div>
             </div>
             <div class="kpi-card">
                 <div class="kpi-num">9 + ~15 Escuelas</div>
@@ -455,14 +480,14 @@
             </div>
             <div class="kpi-card">
                 <div class="kpi-num">Top 1 SEO Web</div>
-                <div class="kpi-label">Posicionamiento 100% orgánico en <em>La Voz del Interior, Puntal, LV16, Telediario</em>, TV, Radio e invitaciones a 4 países.</div>
+                <div class="kpi-label">Alcance 100% orgánico en <a href="https://www.lavoz.com.ar/ciudadanos/primera-robot-rio-cuarto-visita-escuelas-mensaje-humanista_0_l9yq5Vo9cC.html" target="_blank" rel="noopener noreferrer" class="ext-link">La Voz</a>, <a href="https://www.puntal.com.ar/robot/tiene-una-personalidad-propia-asi-es-inanna-el-robot-creado-rio-cuarto-n263397" target="_blank" rel="noopener noreferrer" class="ext-link">Puntal</a>, <a href="https://www.lv16.com.ar/sg/nota-221594/inanna-el-robot-humanoide-del-itec-furor-en-el-cuarto-foro-de-ciudades-del-aprendizaje-de-latinoamerica-en-cordoba" target="_blank" rel="noopener noreferrer" class="ext-link">LV16</a>, <a href="https://www.instagram.com/yosoy.inanna/" target="_blank" rel="noopener noreferrer" class="ext-link">@yosoy.inanna</a> e invitaciones a 4 países.</div>
             </div>
         </div>
 
         <section>
             <h2>1. Cuna Riocuartense y Soberanía Tecnológica</h2>
             <p>
-                El proyecto <strong>Inanna</strong> tuvo su punto de partida académico en la asignatura <em>Robótica e Inteligencia Artificial</em> (Prof. Jorge Estrella) de la Tecnicatura Superior en Mecatrónica en el ITEC, en nuestra ciudad, y fue concebido, diseñado, impreso en 3D y evolucionado íntegramente en el taller local montado en el domicilio de su creador e ideólogo principal, <strong>Fabio Maximiliano Medina Rojas</strong> (fundador de <strong>INANNA COMPANY</strong>), honrando los cimientos globales de ciencia abierta inspirados en el pionero francés Gaël Langevin (<em>InMoov</em>).
+                El proyecto <strong>Inanna</strong> tuvo su punto de partida académico en la asignatura <em>Robótica e Inteligencia Artificial</em> (Prof. Jorge Estrella) de la Tecnicatura Superior en Mecatrónica en el ITEC, en nuestra ciudad, y fue concebido, diseñado, impreso en 3D y evolucionado íntegramente en el taller local montado en el domicilio de su creador e ideólogo principal, <strong>Fabio Maximiliano Medina Rojas</strong> (fundador de <a href="https://inanna-company.github.io/" target="_blank" rel="noopener noreferrer" class="ext-link">INANNA COMPANY</a>), honrando los cimientos globales de ciencia abierta inspirados en el pionero francés Gaël Langevin (<em>InMoov</em>).
             </p>
             <p>
                 En su arquitectura actual <strong>Inanna V2</strong>, constituye un desarrollo soberano inédito en el interior del país: integra un cerebelo determinista en tiempo real en lenguaje C nativo y FreeRTOS sobre microcontroladores ESP32-S inmune a picos electromagnéticos de 20 A, visión computacional neuronal a 106 FPS con mirada viva biológica, radar Doppler de presencia humana de 24 GHz, consola web táctil de 1 ms, Gemelo Digital 3D en ROS 2 y una <strong>Red Neuronal Clasificadora Local propia</strong> alojada en su torso (28,5 MB de RAM, 99,2% de exactitud) que dialoga <strong>100% sin conexión a internet</strong>, resguardando de forma absoluta la privacidad de niñas, niños, jóvenes y adultos mayores.
@@ -473,7 +498,7 @@
             <h2>2. Trayectoria Cronológica Verificada de Eventos, Ordenanzas y Cumbres (2026)</h2>
             <ul>
                 <li><strong>Exposición Rural de la Sociedad Rural de Río Cuarto &amp; Convención Juvenil Plus Ultra (Septiembre 2026):</strong> Invitación oficial junto a la Secretaría de Turismo y Deporte Municipal ante el Gobernador <strong>Martín Llaryora</strong>, el Intendente <strong>Guillermo De Rivas</strong> y miles de vecinos; más presentación escénica de arte digital, impresión 3D e IA en la convención juvenil <em>Plus Ultra</em>.</li>
-                <li><strong>Gira Educativa STEAM e Intergeneracional (Septiembre – Noviembre 2026 y en curso):</strong> <strong>9 establecimientos educativos ya visitados</strong> alcanzando a <strong>más de 2.000 estudiantes</strong>: <em>Colegio Florentino Ameghino</em> (doble turno), <em>ESFP Orientación Agro</em>, <em>Colegio Leopoldo Lugones</em>, <em>Instituto Superior María Inmaculada (ISMI)</em> e <em>Instituto Educativo Jockey Club</em> en Río Cuarto; <em>Escuelas Saturnina Rodríguez de Zavalía</em>, <em>Cornelio Saavedra</em> (doble turno) e <em>IPEA N° 215</em> en Holmberg; <em>98.° Aniversario del C.E. Perito Francisco Moreno</em> en Alcira Gigena (19/10); y <em>Encuentro Regional de Adultos Mayores</em> (16/10).</li>
+                <li><strong>Gira Educativa STEAM e Intergeneracional (Septiembre – Noviembre 2026 y en curso — <a href="https://www.lavoz.com.ar/ciudadanos/primera-robot-rio-cuarto-visita-escuelas-mensaje-humanista_0_l9yq5Vo9cC.html" target="_blank" rel="noopener noreferrer" class="ext-link">Ver crónica en La Voz del Interior</a>):</strong> <strong>9 establecimientos educativos ya visitados</strong> alcanzando a <strong>más de 2.000 estudiantes</strong>: <em>Colegio Florentino Ameghino</em> (doble turno), <em>ESFP Orientación Agro</em>, <em>Colegio Leopoldo Lugones</em>, <em>Instituto Superior María Inmaculada (ISMI)</em> e <em>Instituto Educativo Jockey Club</em> en Río Cuarto; <em>Escuelas Saturnina Rodríguez de Zavalía</em>, <em>Cornelio Saavedra</em> (doble turno) e <em>IPEA N° 215</em> en Holmberg; <em>98.° Aniversario del C.E. Perito Francisco Moreno</em> en Alcira Gigena (19/10); y <em>Encuentro Regional de Adultos Mayores</em> (16/10).</li>
             </ul>
 
             <div class="highlight-agenda">
@@ -490,45 +515,45 @@
             <div class="nasa-box">
                 <h3>🚀 Reseña Oficial y 1.° Puesto Técnico en The 2026 NASA International Space Apps Challenge (14–15/11/2026)</h3>
                 <p style="margin-bottom:0.65rem;">
-                    <strong>¿Qué significa The 2026 NASA Space Apps Challenge?:</strong> Creado en 2012 e impulsado por la Dirección de Misiones Científicas (<em>Science Mission Directorate</em>) de la <strong>NASA</strong> desde Washington D. C. en alianza con <strong>17 Agencias Espaciales Internacionales</strong> —incluyendo la <strong>CONAE (Argentina)</strong>, <strong>ESA (Europa)</strong>, <strong>JAXA (Japón)</strong>, <strong>CSA (Canadá)</strong> y <strong>AEB (Brasil)</strong>—, es la cumbre global de innovación abierta, ciencia aeroespacial y observación terrestre más grande de la historia humana. Bajo el lema <em>«The Next Frontier»</em>, la edición 2026 alcanzó el récord histórico mundial de <strong>181.835 participantes en 593 sedes oficiales</strong> de casi 190 países y territorios.
+                    <strong>¿Qué significa <a href="https://www.spaceappschallenge.org/2026/" target="_blank" rel="noopener noreferrer" class="ext-link">The 2026 NASA Space Apps Challenge</a>?:</strong> Creado en 2012 e impulsado por la Dirección de Misiones Científicas (<em>Science Mission Directorate</em>) de la <a href="https://science.nasa.gov/open-science/nasa-space-apps-challenge-breaks-global-hackathon-records/" target="_blank" rel="noopener noreferrer" class="ext-link">NASA</a> desde Washington D. C. en alianza con <a href="https://www.spaceappschallenge.org/2026/space-agency-partners/" target="_blank" rel="noopener noreferrer" class="ext-link">17 Agencias Espaciales Internacionales</a> —incluyendo la <strong>CONAE (Argentina)</strong>, <strong>ESA (Europa)</strong>, <strong>JAXA (Japón)</strong>, <strong>CSA (Canadá)</strong> y <strong>AEB (Brasil)</strong>—, es la cumbre global de innovación abierta, ciencia aeroespacial y observación terrestre más grande de la historia humana. Bajo el lema <em>«The Next Frontier»</em>, la edición 2026 alcanzó el récord histórico mundial de <strong>181.835 participantes en 593 sedes oficiales</strong> de casi 190 países y territorios.
                 </p>
                 <p style="margin-bottom:0;">
-                    <strong>Participación Riocuartense y 1.° Puesto Actual:</strong> Representando a Río Cuarto en la sede regional de Santa Rosa de Calamuchita, <strong>Fabio Maximiliano Medina Rojas</strong> lideró junto a <strong>Agustín Alejandro Debia</strong> e <strong>Iván David Coria</strong> el equipo oficial <code>INANNA COMPANY</code>, desarrollando en 48 horas la plataforma trilingüe <code>TERRA-SHIFT SCADA &amp; IIoT</code> (telemetría satelital NASA POWER/GIBS en vivo, proyecciones CMIP6, nodos solares rurales ESP32/LoRa/4–20 mA NAMUR NE43 sin internet y guía hablada con la voz neuronal de <strong>Inanna</strong>). En el reporte oficial de auditoría técnica pre-jurado (<code>SPACEAPPS-ANALYZER</code>, 17/11/2026), el equipo alcanzó el <strong>🥇 1.° Puesto absoluto sobre los 13 equipos de la sede</strong> (<code>✓ Aprobado</code>, <code>0 discrepancias</code>, <code>59%</code> de señal técnica y <code>64%</code> de cobertura científica) rumbo a los <em>Global Nominees</em> de la NASA, iniciando además las gestiones para postular a <strong>Río Cuarto como Sede Oficial 2027</strong>.
+                    <strong>Participación Riocuartense y 1.° Puesto Actual:</strong> Representando a Río Cuarto en la sede regional de Santa Rosa de Calamuchita, <strong>Fabio Maximiliano Medina Rojas</strong> lideró junto a <strong>Agustín Alejandro Debia</strong> e <strong>Iván David Coria</strong> el equipo oficial <a href="https://www.spaceappschallenge.org/2026/find-a-team/inanna-company/" target="_blank" rel="noopener noreferrer" class="ext-link">INANNA COMPANY en NASA Space Apps</a>, desarrollando en 48 horas la plataforma trilingüe <code>TERRA-SHIFT SCADA &amp; IIoT</code> (telemetría satelital NASA POWER/GIBS en vivo, proyecciones CMIP6, nodos solares rurales ESP32/LoRa/4–20 mA NAMUR NE43 sin internet y guía hablada con la voz neuronal de <strong>Inanna</strong>). En el reporte oficial de auditoría técnica pre-jurado (<code>SPACEAPPS-ANALYZER</code>, 17/11/2026), el equipo alcanzó el <strong>🥇 1.° Puesto absoluto sobre los 13 equipos de la sede</strong> (<code>✓ Aprobado</code>, <code>0 discrepancias</code>, <code>59%</code> de señal técnica y <code>64%</code> de cobertura científica) rumbo a los <em>Global Nominees</em> de la NASA, iniciando además las gestiones para postular a <strong>Río Cuarto como Sede Oficial 2027</strong>.
                 </p>
             </div>
 
             <ul>
-                <li><strong>IV Foro Internacional de Ciudades del Aprendizaje — UNESCO y Publicación en <code>unesco.org</code> (16 al 18/11/2026, Centro de Convenciones Córdoba):</strong> Discurso protocolar de apertura ante alcaldes, intendentes, autoridades del <strong>Instituto UIL-UNESCO</strong> y delegaciones de <strong>67 ciudades de 12 países</strong>, saludos diplomáticos bilingües a comitivas de <strong>EE. UU. (inglés), Brasil (portugués) y China (mandarín)</strong>, publicación el lunes 16/11 en la <strong>web oficial mundial de la UNESCO (<code>unesco.org</code>)</strong> e invitaciones formales recibidas para presentar a Inanna en <strong>Estados Unidos, Chile, Colombia y Honduras</strong>.</li>
+                <li><strong>IV Foro Internacional de Ciudades del Aprendizaje — UNESCO y Publicación en <a href="https://www.uil.unesco.org/es/learning-cities/cordoba" target="_blank" rel="noopener noreferrer" class="ext-link">unesco.org</a> (16 al 18/11/2026, Centro de Convenciones Córdoba):</strong> Discurso protocolar de apertura ante alcaldes, intendentes, autoridades del <strong>Instituto UIL-UNESCO</strong> y delegaciones de <strong>67 ciudades de 12 países</strong> (<a href="https://cordoba.gob.ar/passerini-encabezo-la-apertura-del-iv-foro-de-ciudades-del-aprendizaje-de-latinoamerica/" target="_blank" rel="noopener noreferrer" class="ext-link">crónica oficial</a>), saludos diplomáticos bilingües a comitivas de <strong>EE. UU. (inglés), Brasil (portugués) y China (mandarín)</strong>, publicación el lunes 16/11 en el ecosistema oficial de la UNESCO e invitaciones formales recibidas para presentar a Inanna en <strong>Estados Unidos, Chile, Colombia y Honduras</strong> (<a href="https://www.lv16.com.ar/sg/nota-221594/inanna-el-robot-humanoide-del-itec-furor-en-el-cuarto-foro-de-ciudades-del-aprendizaje-de-latinoamerica-en-cordoba" target="_blank" rel="noopener noreferrer" class="ext-link">ver nota en LV16</a>).</li>
                 <li><strong>Master Class CPI Córdoba &amp; Universidad de Congreso (18/11/2026, Río Cuarto):</strong> Apertura protocolar y discurso de cierre magistral sobre arquitectura de datos, ética algorítmica (<em>Human-in-the-loop</em>), literatura de Borges y trato humano irremplazable.</li>
             </ul>
         </section>
 
         <section>
-            <h2>3. Relevamiento de Medios, Redes y Posicionamiento Web (SEO Marca Ciudad)</h2>
+            <h2>3. Relevamiento de Medios, Redes y Enlaces Directos Verificados (Hacé clic en cada publicación)</h2>
             <div class="media-grid">
                 <div class="media-card">
                     <h4>🌍 Dominios Globales y Portales Oficiales</h4>
-                    <p>• <strong>UNESCO Oficial (<code>unesco.org</code> / UIL):</strong> Publicación internacional desde el lunes 16/11/2026 (Autoridad de Dominio Mundial DA 93/100).</p>
-                    <p>• <strong>NASA Space Apps (<code>spaceappschallenge.org</code>):</strong> Página verificada del equipo riocuartense auditado en <strong>1.° Puesto Técnico</strong>.</p>
-                    <p>• <strong>Municipalidad de Córdoba (<code>cordoba.gob.ar</code> / <code>@cordobaeduca</code>):</strong> Cobertura oficial ante la Red Latinoamericana de 67 ciudades.</p>
+                    <p>• <strong>UNESCO Oficial (UIL Learning Cities):</strong> <a href="https://www.uil.unesco.org/es/learning-cities/cordoba" target="_blank" rel="noopener noreferrer" class="ext-link">Portal Oficial UNESCO (uil.unesco.org)</a> y <a href="https://www.redciudadesaprendizajelatam.org/cordoba" target="_blank" rel="noopener noreferrer" class="ext-link">Red Ciudades del Aprendizaje LATAM</a> (DA 93/100).</p>
+                    <p>• <strong>NASA Space Apps Oficial:</strong> <a href="https://www.spaceappschallenge.org/2026/find-a-team/inanna-company/" target="_blank" rel="noopener noreferrer" class="ext-link">Equipo Oficial INANNA COMPANY (1.° Puesto Técnico)</a> y <a href="https://www.spaceappschallenge.org/2026/" target="_blank" rel="noopener noreferrer" class="ext-link">Portal Global NASA 2026</a>.</p>
+                    <p>• <strong>Municipalidad de Córdoba (<code>cordoba.gob.ar</code>):</strong> <a href="https://cordoba.gob.ar/passerini-encabezo-la-apertura-del-iv-foro-de-ciudades-del-aprendizaje-de-latinoamerica/" target="_blank" rel="noopener noreferrer" class="ext-link">Apertura del IV Foro UNESCO</a> y <a href="https://cordoba.gob.ar/con-mas-de-1500-participantes-cordoba-cerro-el-iv-foro-latinoamericano-de-ciudades-del-aprendizaje/" target="_blank" rel="noopener noreferrer" class="ext-link">Balance Oficial (+1.500 participantes)</a>.</p>
                 </div>
                 <div class="media-card">
-                    <h4>📰 Prensa Gráfica y Portales Digitales</h4>
-                    <p>• <strong>La Voz del Interior (15/10/2026):</strong> <em>«La primera robot de Río Cuarto visita escuelas con un "mensaje humanista"»</em>.</p>
-                    <p>• <strong>Diario Puntal (20 y 21/08/2026):</strong> <em>«Tiene una personalidad propia: así es INANNA...»</em> e <em>«Inanna: la robot riocuartense que ya puede interactuar...»</em>.</p>
-                    <p>• <strong>LV16.com (18/08 y 17/11/2026):</strong> <em>«Inanna... furor en el cuarto Foro de Ciudades del Aprendizaje...»</em>.</p>
-                    <p>• <strong>Otros medios digitales:</strong> <em>Telediario Digital</em> (20/08), <em>Sin Libreto</em>, <em>Hoy Día Córdoba</em>, <em>Exa Media</em>, <em>Agencia Nacional Realpolitik</em> y <em>Agencia La Rioja</em>.</p>
+                    <h4>📰 Prensa Gráfica y Portales Digitales (Links Directos)</h4>
+                    <p>• <strong>La Voz del Interior (15/10/2026):</strong> <a href="https://www.lavoz.com.ar/ciudadanos/primera-robot-rio-cuarto-visita-escuelas-mensaje-humanista_0_l9yq5Vo9cC.html" target="_blank" rel="noopener noreferrer" class="ext-link">«La primera robot de Río Cuarto visita escuelas con un "mensaje humanista"»</a>.</p>
+                    <p>• <strong>Diario Puntal (20 y 21/08/2026):</strong> <a href="https://www.puntal.com.ar/robot/tiene-una-personalidad-propia-asi-es-inanna-el-robot-creado-rio-cuarto-n263397" target="_blank" rel="noopener noreferrer" class="ext-link">«Tiene una personalidad propia: así es INANNA...»</a> y <a href="https://www.puntal.com.ar/robot/inanna-la-robot-riocuartense-que-ya-puede-interactuar-las-personas-n263420" target="_blank" rel="noopener noreferrer" class="ext-link">«Inanna: la robot riocuartense que ya puede interactuar...»</a>.</p>
+                    <p>• <strong>LV16.com (18/08 y 17/11/2026):</strong> <a href="https://www.lv16.com.ar/sg/nota-218393/inanna-el-primer-prototipo-de-robot-humanoide-desarrollado-en-rio-cuarto-por-estudiantes-del-itec" target="_blank" rel="noopener noreferrer" class="ext-link">Nota presentación (18/08)</a> y <a href="https://www.lv16.com.ar/sg/nota-221594/inanna-el-robot-humanoide-del-itec-furor-en-el-cuarto-foro-de-ciudades-del-aprendizaje-de-latinoamerica-en-cordoba" target="_blank" rel="noopener noreferrer" class="ext-link">«Inanna... furor en el cuarto Foro de Ciudades del Aprendizaje...» (17/11)</a>.</p>
+                    <p>• <strong>Más portales verificados:</strong> <a href="https://www.telediariodigital.com.ar/post/inanna-el-primer-robot-humanoide-con-inteligencia-artificial-que-naci%C3%B3-en-un-aula-de-r%C3%ADo-cuarto" target="_blank" rel="noopener noreferrer" class="ext-link">Telediario Digital (20/08)</a>, <a href="https://sinlibretoproducciones.com.ar/inanna-la-robot-que-nacio-en-rio-cuarto-de-la-mano-de-estudiantes-de-mecatronica/" target="_blank" rel="noopener noreferrer" class="ext-link">Sin Libreto Producciones</a>, <a href="https://hoydia.com.ar/hoy-cordoba/cordoba-inauguro-el-iv-foro-de-ciudades-del-aprendizaje-de-latinoamerica-con-representantes-de-mas-de-60-ciudades/" target="_blank" rel="noopener noreferrer" class="ext-link">Hoy Día Córdoba</a>, <a href="https://www.examedia.com.ar/portada/post/88059080" target="_blank" rel="noopener noreferrer" class="ext-link">Exa Media</a>, <a href="https://realpolitik.com.ar/nota/75326/jose-c-paz-participa-del-iv-foro-de-ciudades-del-aprendizaje-de-la-unesco-en-cordoba/" target="_blank" rel="noopener noreferrer" class="ext-link">Agencia Nacional Realpolitik</a> y <a href="https://agencianoticiaslarioja.com.ar/tag/inana/" target="_blank" rel="noopener noreferrer" class="ext-link">Agencia La Rioja</a>.</p>
                 </div>
                 <div class="media-card">
-                    <h4>📺 Televisión, Streaming y Radio en Vivo</h4>
-                    <p>• <strong>Televisión:</strong> Entrevistas en estudio en <strong>Canal 13 Río Cuarto (Telediario TV)</strong>, <strong>Canal 4</strong> y <strong>Sin Libreto</strong> (Gabriel Martella).</p>
-                    <p>• <strong>Radio:</strong> <strong>LV16 Radio Río Cuarto</strong> y doble turno interactivo en vivo en <strong>Radio Lola</strong> (Fabricio López y Pablo García).</p>
+                    <h4>📺 Televisión, Streaming, YouTube y Radio</h4>
+                    <p>• <strong>Videos en YouTube / TV (Clic para ver):</strong> <a href="https://www.youtube.com/shorts/D77bxQa1uLw" target="_blank" rel="noopener noreferrer" class="ext-link">Telediario TV / Canal 13 («El futuro llegó a Río Cuarto: Inanna»)</a>, <a href="https://www.youtube.com/watch?v=aBN0KpU5sLQ" target="_blank" rel="noopener noreferrer" class="ext-link">Puntal AM («Inanna: la robot riocuartense»)</a>, <a href="https://www.youtube.com/watch?v=4zOtshtqRNo" target="_blank" rel="noopener noreferrer" class="ext-link">Programa TV Hi Techie</a> y <a href="https://www.youtube.com/watch?v=yd61X2naa8U" target="_blank" rel="noopener noreferrer" class="ext-link">Streaming IV Foro UNESCO</a>.</p>
+                    <p>• <strong>TV y Radio en Estudio:</strong> <strong>Canal 13 Río Cuarto</strong>, <strong>Canal 4</strong>, <a href="https://sinlibretoproducciones.com.ar/inanna-la-robot-que-nacio-en-rio-cuarto-de-la-mano-de-estudiantes-de-mecatronica/" target="_blank" rel="noopener noreferrer" class="ext-link">Sin Libreto (Gabriel Martella)</a>, <strong>LV16 Radio Río Cuarto</strong> y doble turno en vivo en <strong>Radio Lola</strong> (Fabricio López y Pablo García).</p>
                     <p>• <strong>Proyección Nacional:</strong> Cápsulas dedicadas para <strong>TN Tecno</strong>, <strong>Vorterix (Mario Pergolini)</strong> y <strong>Diego Ramos</strong>.</p>
                 </div>
                 <div class="media-card">
-                    <h4>📈 SEO Web, YouTube y Efecto Multiplicador en 12 Países</h4>
-                    <p>• <strong>Top 1 Orgánico en Google y Motores IA:</strong> El 100% de las búsquedas de <em>"Inanna robot"</em> posicionan orgánicamente a <strong>Río Cuarto</strong> como polo de robótica humanoide e IA sin pauta publicitaria paga (100% <em>Earned Media</em>).</p>
-                    <p>• <strong>YouTube, Instagram (<code>@yosoy.inanna</code>) y TikTok:</strong> Documentales bilingües (<em>«Inanna: The Robot from Río Cuarto»</em>), reels virales y fotografías replicadas por alcaldes, diplomáticos y referentes tech (NVIDIA, Oracle, AWS) de América, Europa y Asia.</p>
+                    <h4>📈 Redes Oficiales (<code>@yosoy.inanna</code>) y SEO Marca Ciudad</h4>
+                    <p>• <strong>Instagram Oficial de Inanna:</strong> <a href="https://www.instagram.com/yosoy.inanna/" target="_blank" rel="noopener noreferrer" class="ext-link">instagram.com/yosoy.inanna (@yosoy.inanna)</a> — Comunidad activa con reels virales de taller, escuelas, co-conducción y cumbres internacionales.</p>
+                    <p>• <strong>Top 1 Orgánico en Google y Efecto Multiplicador en 12 Países:</strong> El 100% de las búsquedas de <em>"Inanna robot"</em> posicionan orgánicamente a <strong>Río Cuarto</strong> sin pauta paga (100% <em>Earned Media</em>), amplificado por alcaldes, diplomáticos y líderes tech (NVIDIA, Oracle, AWS) de América, Europa y Asia.</p>
                 </div>
             </div>
         </section>
@@ -560,9 +585,10 @@
             <p>De mi mayor consideración:</p>
             <p>Tengo el agrado de dirigirme a usted y, por su digno intermedio, a las señoras y señores concejales que integran ese Honorable Cuerpo Legislativo, a fin de elevar para su formal ingreso parlamentario y tratamiento en comisiones el adjunto <strong>Proyecto de Ordenanza</strong> —acompañado de su Anexo Único Documental de Antecedentes, Medios y Posicionamiento Global—, mediante el cual se propone declarar de Interés Legislativo, Científico, Tecnológico, Educativo, Cultural, Social y Productivo Municipal al Proyecto <strong>“Inanna” (Inanna V2)</strong>, primer robot humanoide de escala real (1,92 m) impreso en 3D y programado con inteligencia artificial propia en nuestra ciudad; y designar oficialmente al Técnico Superior en Mecatrónica <strong>Fabio Maximiliano Medina Rojas</strong> y al robot humanoide <strong>Inanna</strong> como Embajador y Embajadora de la Robótica y la Inteligencia Artificial de la Ciudad de Río Cuarto.</p>
             <p>Gestada en el ámbito de la formación técnica superior en Mecatrónica en el ITEC, en nuestra ciudad, y evolucionada íntegramente en nuestro taller local montado en el domicilio de Fabio Maximiliano Medina Rojas hasta consolidar una arquitectura mecatrónica y neuronal 100% soberana e inédita en el interior del país, Inanna se ha convertido en un estandarte vivo del talento innovador riocuartense.</p>
-            <p>A lo largo del presente año, el proyecto ya ha recorrido nueve instituciones educativas de Río Cuarto y la región —inspirando cara a cara a más de 2.000 niñas, niños y jóvenes y manteniendo actualmente en agenda alrededor de quince nuevos establecimientos escolares y visitas solidarias e intergeneracionales a geriátricos y residencias de adultos mayores—; ha protagonizado en el CECIS la primera co-conducción en vivo de un robot humanoide en el país durante Río Cuarto Emprende 2026; ha participado de forma destacada en la Feria del Libro Juan Filloy 2026, en la Exposición Rural de Río Cuarto y en la Universidad de Congreso; y ha representado con orgullo a nuestra ciudad en las instancias más exigentes del continente y del mundo: la inauguración del centro de entrenamiento de robots humanoides más grande de Latinoamérica (New HQ Humandroid Córdoba, junto a referentes de NVIDIA, Oracle y AWS); la obtención del 1.° Puesto actual en la auditoría técnica oficial del hackathon mundial NASA International Space Apps Challenge 2026 (liderando desde Río Cuarto el equipo integrado junto a Agustín Alejandro Debia e Iván David Coria, con guía de voz neuronal de Inanna, e impulsando a Río Cuarto como Sede Oficial 2027); y la apertura oficial del IV Foro Internacional de Ciudades del Aprendizaje de la UNESCO ante delegaciones de sesenta y siete ciudades de doce países, hito que escaló el lunes 16 de noviembre hasta la página web oficial de la UNESCO (<code>unesco.org</code>) y abrió invitaciones internacionales para presentar este desarrollo riocuartense en Estados Unidos, Chile, Colombia y Honduras.</p>
+            <p>A lo largo del presente año, el proyecto ya ha recorrido nueve instituciones educativas de Río Cuarto y la región —inspirando cara a cara a más de 2.000 niñas, niños y jóvenes y manteniendo actualmente en agenda alrededor de quince nuevos establecimientos escolares y visitas solidarias e intergeneracionales a geriátricos y residencias de adultos mayores—; ha protagonizado en el CECIS la primera co-conducción en vivo de un robot humanoide en el país durante Río Cuarto Emprende 2026; ha participado de forma destacada en la Feria del Libro Juan Filloy 2026, en la Exposición Rural de Río Cuarto y en la Universidad de Congreso; y ha representado con orgullo a nuestra ciudad en las instancias más exigentes del continente y del mundo: la inauguración del centro de entrenamiento de robots humanoides más grande de Latinoamérica (New HQ Humandroid Córdoba, junto a referentes de NVIDIA, Oracle y AWS); la obtención del 1.° Puesto actual en la auditoría técnica oficial del hackathon mundial NASA International Space Apps Challenge 2026 (liderando desde Río Cuarto el equipo integrado junto a Agustín Alejandro Debia e Iván David Coria, con guía de voz neuronal de Inanna, e impulsando a Río Cuarto como Sede Oficial 2027); y la apertura oficial del IV Foro Internacional de Ciudades del Aprendizaje de la UNESCO ante delegaciones de sesenta y siete ciudades de doce países, hito que escaló el lunes 16 de noviembre hasta la página web oficial de la UNESCO (<a href="https://www.uil.unesco.org/es/learning-cities/cordoba" target="_blank" rel="noopener noreferrer" class="ext-link">unesco.org</a>) y abrió invitaciones internacionales para presentar este desarrollo riocuartense en Estados Unidos, Chile, Colombia y Honduras.</p>
             <p>Asimismo, sumado al valioso antecedente de que el Honorable Concejo Deliberante de Santa Catalina (Holmberg) ya sancionó y aprobó por Ordenanza su Declaración de Interés Municipal, resulta de especial trascendencia institucional que Río Cuarto —su ciudad natal y el suelo desde el cual proyecta innovación al mundo— consagre formalmente a Inanna y a su creador como sus Embajadores.</p>
             <p>Quedando a entera disposición de la Presidencia y de los distintos bloques parlamentarios para ampliar fundamentos y realizar una demostración presencial en vivo de Inanna ante las comisiones o el pleno del Cuerpo, saludo a usted con mi consideración más distinguida.</p>
+            <p>Atentamente,</p>
 
             <hr style="border:none;border-top:1px solid #263348;margin:2rem 0;">
 
@@ -576,7 +602,7 @@
             <p>Que, honrando los cimientos globales de la ciencia abierta inspirados en el pionero francés Gaël Langevin (proyecto InMoov), Fabio Maximiliano Medina Rojas desarrolló íntegramente desde su taller en la ciudad de Río Cuarto una profunda evolución de ingeniería soberana denominada Inanna V2, dotando al humanoide de 1,92 metros de estatura, 26 grados de libertad activos, manos antropomórficas traccionadas por tendones, reducciones mecánicas propias de alto par en hombros (&gt; 102 kg·cm), cerebelo determinista C/FreeRTOS sobre ESP32-S inmune al ruido electromagnético, visión computacional a 106 FPS, Gemelo Digital en ROS 2 y una Red Neuronal Clasificadora Local propia que opera 100% sin conexión a internet (28,5 MB RAM, 1,6 ms), garantizando la privacidad absoluta de los datos.</p>
             <p>Que uno de los pilares más admirables del proyecto radica en su profunda vocación pedagógica, social, solidaria e intergeneracional, materializada en una gira que ya ha visitado nueve establecimientos educativos de Río Cuarto y el sur provincial —Colegio Florentino Ameghino, ESFP Orientación Agro, Colegio Leopoldo Lugones, ISMI e Instituto Educativo Jockey Club en nuestra ciudad; Escuelas Saturnina Rodríguez de Zavalía, Cornelio Saavedra e IPEA N° 215 en Holmberg; y el 98.° Aniversario del C.E. Perito Francisco Moreno de Alcira Gigena—, donde más de 2.000 niñas, niños y jóvenes interactuaron con Inanna despertando vocaciones STEAM, contando además actualmente con una agenda activa de aproximadamente quince nuevas escuelas por visitar y un cronograma de encuentros afectivos, recreativos e intergeneracionales en geriátricos y residencias de adultos mayores.</p>
             <p>Que en nuestra ciudad protagonizó obras teatrales de fomento a la lectura en la Feria del Libro “Juan Filloy” 2026 junto a la escritora Bachi Salas; marcó un hito nacional el 8 de octubre de 2026 como primera co-conductora humanoide en vivo durante Río Cuarto Emprende 2026 en el CECIS ante más de 300 empresarios; participó en la Exposición Rural de Río Cuarto ante el Gobernador Martín Llaryora y el Intendente Guillermo De Rivas; y encabezó la apertura y cierre de la Master Class del CPI Córdoba en la Universidad de Congreso.</p>
-            <p>Que a escala continental y global representó a Río Cuarto el 11 de noviembre de 2026 en la inauguración del New HQ &amp; Training Center de Humandroid en Córdoba (junto a referentes de NVIDIA, Oracle y AWS); obtuvo los días 14 y 15 de noviembre de 2026 el 1.° Puesto absoluto en la auditoría técnica oficial de <em>The 2026 NASA International Space Apps Challenge</em> (récord mundial de 181.835 participantes en 593 sedes junto a 17 agencias espaciales incluida CONAE), liderando junto a Agustín Alejandro Debia e Iván David Coria el sistema <code>TERRA-SHIFT SCADA &amp; IIoT</code> e impulsando a Río Cuarto como Sede Oficial 2027; y brindó el 16 de noviembre de 2026 el discurso protocolar de apertura del IV Foro de Ciudades del Aprendizaje de la UNESCO ante 67 ciudades de 12 países, alcanzando publicación en <code>unesco.org</code>, posicionamiento SEO Top 1 para Río Cuarto e invitaciones internacionales desde Estados Unidos, Chile, Colombia y Honduras.</p>
+            <p>Que a escala continental y global representó a Río Cuarto el 11 de noviembre de 2026 en la inauguración del New HQ &amp; Training Center de Humandroid en Córdoba (junto a referentes de NVIDIA, Oracle y AWS); obtuvo los días 14 y 15 de noviembre de 2026 el 1.° Puesto absoluto en la auditoría técnica oficial de <a href="https://www.spaceappschallenge.org/2026/find-a-team/inanna-company/" target="_blank" rel="noopener noreferrer" class="ext-link">The 2026 NASA International Space Apps Challenge</a> (récord mundial de 181.835 participantes en 593 sedes junto a 17 agencias espaciales incluida CONAE), liderando junto a Agustín Alejandro Debia e Iván David Coria el sistema <code>TERRA-SHIFT SCADA &amp; IIoT</code> e impulsando a Río Cuarto como Sede Oficial 2027; y brindó el 16 de noviembre de 2026 el discurso protocolar de apertura del IV Foro de Ciudades del Aprendizaje de la UNESCO ante 67 ciudades de 12 países, alcanzando publicación en <a href="https://www.uil.unesco.org/es/learning-cities/cordoba" target="_blank" rel="noopener noreferrer" class="ext-link">unesco.org</a>, posicionamiento SEO Top 1 para Río Cuarto e invitaciones internacionales desde Estados Unidos, Chile, Colombia y Honduras.</p>
             <p>Que, habiendo sido el proyecto ya declarado oficialmente de Interés Municipal mediante Ordenanza aprobada por el Honorable Concejo Deliberante de Santa Catalina (Holmberg), corresponde que este Concejo Deliberante de la Ciudad de Río Cuarto otorgue el máximo respaldo institucional al desarrollo nacido en nuestra ciudad y confiera a su creador y a su obra la investidura oficial de Embajadores.</p>
 
             <p><strong style="color:var(--gold);">POR ELLO:</strong></p>
@@ -596,8 +622,8 @@
     </div>
 
     <footer>
-        <span><strong>Fabio Maximiliano Medina Rojas</strong> • Técnico Superior en Mecatrónica • Fundador de <strong>INANNA COMPANY</strong></span>
-        <span>Río Cuarto, Córdoba, Argentina • Instagram: <strong>@yosoy.inanna</strong> • <a href="mailto:inannacompanyrio4@gmail.com" style="color:var(--cyan);text-decoration:none;font-weight:700;">inannacompanyrio4@gmail.com</a></span>
+        <span><strong>Fabio Maximiliano Medina Rojas</strong> • Técnico Superior en Mecatrónica • Fundador de <a href="https://inanna-company.github.io/" target="_blank" rel="noopener noreferrer" class="ext-link">INANNA COMPANY</a></span>
+        <span>Río Cuarto, Córdoba, Argentina • Instagram: <a href="https://www.instagram.com/yosoy.inanna/" target="_blank" rel="noopener noreferrer" class="ext-link">@yosoy.inanna</a> • <a href="mailto:inannacompanyrio4@gmail.com" style="color:var(--cyan);text-decoration:none;font-weight:700;">inannacompanyrio4@gmail.com</a></span>
     </footer>
 </div>
 
